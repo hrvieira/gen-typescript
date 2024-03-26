@@ -9,7 +9,7 @@ num2 = readline.questionFloat("Digite o segundo número:\n");
 console.log(`Soma: ${somar(num1,num2)}`);
 console.log(`Subtrai: ${subtrair(num1,num2)}`);
 console.log(`Multiplica: ${multiplicar(num1,num2)}`);
-console.log(`Divide: ${dividir(num1,num2)}`);
+
 
 about();
 
@@ -27,6 +27,14 @@ function multiplicar(num1: number, num2: number): number {
 
 function dividir(num1: number, num2: number): number {
      return num1 / num2;
+}
+
+let divisao = dividir(num1, num2);
+
+if(divisao !== null){
+     console.log(`Divide: ${divisao}`);
+} else {
+     console.log(`Não existe divisão por zero!`);
 }
 
 function about(): void{
