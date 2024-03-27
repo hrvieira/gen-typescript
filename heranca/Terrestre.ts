@@ -12,25 +12,29 @@ export class Terrestre extends Transporte {
 		this._velocidade = velocidade;
 	}
 
-	public get numeroRodas() {
+	public get_numeroRodas() {
 		return this._numeroRodas;
 	}
 
-	public set numeroRodas(value: number) {
+	public set_numeroRodas(value: number) {
 		this._numeroRodas = value;
 	}
 
-	public get velocidade() {
+	public get_velocidade() {
 		return this._velocidade;
 	}
 
-	public set velocidade(value: number) {
+	public set_velocidade(value: number) {
 		this._velocidade = value;
+	}
+
+	protected calcularAliquota(percentual: number): number{
+		return percentual / 100;
 	}
 
      public visualizar(): void {
           super.visualizar();
-          console.log(`Número de rodas: ${this.numeroRodas}`);
-          console.log(`Velocidade: ${this.velocidade}`);
+          console.log(`Número de rodas: ${this._numeroRodas}`);
+          console.log(`Velocidade: ${this._velocidade}`);
      }
 }
